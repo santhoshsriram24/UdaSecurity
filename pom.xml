@@ -25,7 +25,6 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         
-        <!-- Dependency Versions -->
         <junit-jupiter.version>5.9.3</junit-jupiter.version>
         <mockito.version>5.3.1</mockito.version>
         <gson.version>2.10.1</gson.version>
@@ -37,7 +36,6 @@
         <spotbugs-maven-plugin.version>4.8.0.0</spotbugs-maven-plugin.version>
         <spotbugs.skip>true</spotbugs.skip>
         
-        <!-- Plugin Versions -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M9</maven-surefire-plugin.version>
         <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>
@@ -50,7 +48,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- JUnit 5 -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
@@ -70,7 +67,6 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- Mockito -->
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
@@ -84,42 +80,36 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- Gson -->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>${gson.version}</version>
             </dependency>
 
-            <!-- Guava (for TypeToken in Gson) -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
 
-            <!-- SLF4J -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
 
-            <!-- MigLayout -->
             <dependency>
                 <groupId>com.miglayout</groupId>
                 <artifactId>miglayout-swing</artifactId>
                 <version>${miglayout.version}</version>
             </dependency>
 
-            <!-- AWS SDK (for Rekognition) -->
             <dependency>
                 <groupId>software.amazon.awssdk</groupId>
                 <artifactId>rekognition</artifactId>
                 <version>${aws-sdk.version}</version>
             </dependency>
 
-            <!-- Internal Modules -->
             <dependency>
                 <groupId>com.udacity.catpoint</groupId>
                 <artifactId>imageservice</artifactId>
@@ -159,7 +149,6 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven-surefire-plugin.version}</version>
                     <configuration>
-                        <!-- Mockito requires access to packages for mocking -->
                         <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
                     </configuration>
                 </plugin>
@@ -196,7 +185,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <!-- SpotBugs reporting removed due to Java 17 bytecode version incompatibility -->
-    <!-- Build and testing validated; application ready for deployment -->
 </project>

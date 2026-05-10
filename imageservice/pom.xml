@@ -17,19 +17,16 @@
     <description>Image Recognition Service Module</description>
 
     <dependencies>
-        <!-- SLF4J for logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
         </dependency>
 
-        <!-- AWS SDK for Rekognition -->
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>rekognition</artifactId>
         </dependency>
 
-        <!-- Testing Dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

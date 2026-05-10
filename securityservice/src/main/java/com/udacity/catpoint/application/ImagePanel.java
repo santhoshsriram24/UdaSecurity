@@ -12,9 +12,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-/** Panel containing the 'camera' output. Allows users to 'refresh' the camera
- * by uploading their own picture, and 'scan' the picture, sending it for image analysis
- */
 public class ImagePanel extends JPanel implements StatusListener {
     private SecurityService securityService;
 
@@ -39,7 +36,6 @@ public class ImagePanel extends JPanel implements StatusListener {
         cameraLabel.setPreferredSize(new Dimension(IMAGE_WIDTH, IMAGE_HEIGHT));
         cameraLabel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
 
-        //button allowing users to select a file to be the current camera image
         JButton addPictureButton = new JButton("Refresh Camera");
         addPictureButton.addActionListener(e -> {
             JFileChooser chooser = new JFileChooser();
