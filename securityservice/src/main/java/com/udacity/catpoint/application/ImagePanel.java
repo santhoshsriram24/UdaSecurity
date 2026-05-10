@@ -55,7 +55,6 @@ public class ImagePanel extends JPanel implements StatusListener {
             repaint();
         });
 
-        //button that sends the image to the image service
         JButton scanPictureButton = new JButton("Scan Picture");
         scanPictureButton.addActionListener(e -> {
             securityService.processImage(currentCameraImage);
@@ -69,7 +68,6 @@ public class ImagePanel extends JPanel implements StatusListener {
 
     @Override
     public void notify(AlarmStatus status) {
-        //no behavior necessary
     }
 
     @Override
@@ -83,6 +81,5 @@ public class ImagePanel extends JPanel implements StatusListener {
 
     @Override
     public void sensorStatusChanged() {
-        //no behavior necessary
     }
 }

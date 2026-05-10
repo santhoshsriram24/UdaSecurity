@@ -73,20 +73,11 @@ public class SensorPanel extends JPanel {
         revalidate();
     }
 
-    /**
-     * Asks the securityService to change a sensor activation status and then rebuilds the current sensor list
-     * @param sensor The sensor to update
-     * @param isActive The sensor's activation status
-     */
     private void setSensorActivity(Sensor sensor, Boolean isActive) {
         securityService.changeSensorActivationStatus(sensor, isActive);
         updateSensorList(sensorListPanel);
     }
 
-    /**
-     * Adds a sensor to the securityService and then rebuilds the sensor list
-     * @param sensor The sensor to add
-     */
     private void addSensor(Sensor sensor) {
         if(securityService.getSensors().size() < 4) {
             securityService.addSensor(sensor);
@@ -96,10 +87,6 @@ public class SensorPanel extends JPanel {
         }
     }
 
-    /**
-     * Remove a sensor from the securityService and then rebuild the sensor list
-     * @param sensor The sensor to remove
-     */
     private void removeSensor(Sensor sensor) {
         securityService.removeSensor(sensor);
         updateSensorList(sensorListPanel);
