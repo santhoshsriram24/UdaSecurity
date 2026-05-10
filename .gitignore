@@ -1,0 +1,17 @@
+# Maven build output
+**/target/
+
+# Maven shade temporary file
+**/dependency-reduced-pom.xml
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Java crash logs
+hs_err_pid*
