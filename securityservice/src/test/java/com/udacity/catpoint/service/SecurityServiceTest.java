@@ -6,6 +6,7 @@ import com.udacity.catpoint.data.SecurityRepository;
 import com.udacity.catpoint.data.Sensor;
 import com.udacity.catpoint.data.SensorType;
 import com.udacity.catpoint.application.StatusListener;
+import com.udacity.catpoint.imageservice.ImageService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
